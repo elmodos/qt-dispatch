@@ -1,9 +1,9 @@
-# QDispatch
+# Dispatch
 Run sync/async std::function on main/background threads
 
-### QDispatch::async
+### Dispatch::async
 ```
-QDispatch::async(QDispatch::Background, []() {
+Dispatch::async(Dispatch::Background, []() {
     qDebug() << "Hello from async";
 });
 qDebug() << "Next line";
@@ -17,9 +17,9 @@ Hello from async
 ```
 
 
-### QDispatch::sync
+### Dispatch::sync
 ```
-QDispatch::sync(QDispatch::Background, []() {
+Dispatch::sync(Dispatch::Background, []() {
     qDebug() << "Hello from sync";
 });
 qDebug() << "Next line";
