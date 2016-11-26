@@ -1,5 +1,5 @@
-#ifndef DISPATCHER_H
-#define DISPATCHER_H
+#ifndef QDISPATCH_H
+#define QDISPATCH_H
 
 #include <QCoreApplication>
 #include <QMetaObject>
@@ -38,4 +38,4 @@ namespace QDispatch // Private
     };
 }
 
-#endif // DISPATCHER_H
+#endif // QDISPATCH_H
