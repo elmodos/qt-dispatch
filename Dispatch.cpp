@@ -50,7 +50,8 @@ void Dispatch::syncMain(Dispatch::Thread thread, Qt::ConnectionType connectionTy
     }
     else
     {
-        qRegisterMetaType<Dispatch::Block>("Dispatch::Block");
+        static int value = qRegisterMetaType<Dispatch::Block>("Dispatch::Block");
+        Q_UNUSED(value);
 
         Dispatch::BlockObject *worker = new Dispatch::BlockObject(threadInstance);
         QMetaObject::invokeMethod(worker, "run", connectionType, Q_ARG(Dispatch::Block, block));
